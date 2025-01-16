@@ -1,51 +1,30 @@
-/* Global styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f8f9fa; /* Light gray background */
-  color: #343a40; /* Dark gray text */
+  padding: 100px;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 h1, h2 {
-  color: #007bff; /* Blue for headings */
+  color: #007bff;
   text-align: center;
 }
 
 .container {
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  background: #ffffff; /* White background for the main content */
+  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-/* Task List */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
-  padding: 10px;
-  background: #e9ecef; /* Light background for tasks */
-  border-radius: 4px;
-}
-
-li span {
-  flex-grow: 1;
-}
-
-/* Buttons */
+/* Global button styles */
 button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #007bff; /* Blue button */
+  padding: 8px 15px;
+  background-color: #007bff; /* Default button color */
   color: white;
   border: none;
   border-radius: 4px;
@@ -54,45 +33,79 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
-button.cancel {
-  background-color: #dc3545; /* Red for cancel/delete */
+/* Specific style for the Delete button */
+button.delete {
+  background-color: #dc3545; /* Red color */
 }
 
-button.cancel:hover {
+button.delete:hover {
   background-color: #c82333; /* Darker red on hover */
 }
 
-/* Form */
+/* Specific style for the Edit button */
+button.edit {
+  background-color: #28a745; /* Green color */
+}
+
+button.edit:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  width: 100%;
 }
 
-input[type="text"] {
-  padding: 8px;
+input[type="text"], input[type="date"], select {
+  padding: 10px;
   border: 1px solid #ced4da;
+  color: #6c757d;
   border-radius: 4px;
   font-size: 16px;
+  width: 100%;
 }
 
-input[type="text"]:focus {
-  border-color: #007bff;
-  outline: none;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-textarea {
-  padding: 8px;
+th, td {
+  padding: 10px;
+  text-align: left;
   border: 1px solid #ced4da;
-  border-radius: 4px;
-  font-size: 16px;
-  resize: none;
 }
 
-textarea:focus {
-  border-color: #007bff;
-  outline: none;
+th {
+  background-color: #f1f1f1;
+  color: #495057;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
 }
